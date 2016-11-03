@@ -16,7 +16,7 @@ namespace MLog
             {
                 return System.Net.Dns.GetHostAddresses(System.Web.HttpContext.Current.Request.UserHostAddress).GetValue(0).ToString();
             }
-            return 
+            return "";
         }
 
         public static string GetMethodFullName(int framesToSkip = 1)
