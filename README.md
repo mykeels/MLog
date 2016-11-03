@@ -66,7 +66,7 @@ The Database Schema for MLog can be found [here](MLog.Data).
 
 ```xml
   <connectionStrings>
-    <add name="MLog.Properties.Settings.MLogConnectionString" connectionString="Data Source=WN-ITDEV-LT08;Initial Catalog=MLog;User ID=[your db username];Password=[your password]"
+    <add name="MLog.Properties.Settings.MLogConnectionString" connectionString="Data Source=MYKEELS-PC;Initial Catalog=MLog;User ID=[your db username];Password=[your password]"
         providerName="System.Data.SqlClient" />
   </connectionStrings>
 ```
