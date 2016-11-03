@@ -2,7 +2,9 @@
 
 A Simple .NET Library for Data Logging.
 
-### Simple Usage
+## How to Use
+
+#### Simple Usage
 
 ```cs
 //Task: Create a Log for the creation of a New Student
@@ -12,7 +14,7 @@ log.Description = log.Application + " Data Log for " + title;
 Mlog.Manager.Add(log);
 ```
 
-### Log Relationships
+#### Log Relationships
 
 Logs have parent-children relationships using the `Parent` property of each Log-Item. To Create a Child Log:
 
@@ -25,7 +27,7 @@ log.AddChild(coursesLog);
 Mlog.Manager.Add(log);
 ```
 
-### Log Ip Address
+#### Log Ip Address
 
 For documentation purposes, you might want to include the IP Address of the User who performs an Action in its Log.
 
@@ -33,15 +35,7 @@ For documentation purposes, you might want to include the IP Address of the User
 log.IpAddress = MLog.Util.GetIpAddress();
 ```
 
-### Set the [Application] Field via the Web.Config
-
-```xml
-  <appSettings>
-    <add key="mlog-app" value="MlogTests" />
-  </appSettings>
-```
-
-### Log Requests and Responses in WebApi programs
+#### Log Requests and Responses in WebApi programs
 
 ```cs
     [Route("api/students/add")]
@@ -53,3 +47,24 @@ log.IpAddress = MLog.Util.GetIpAddress();
         });
     }
 ```
+
+## Setup Web.Config
+
+#### Set the [Application] Field
+
+```xml
+  <appSettings>
+    <add key="mlog-app" value="MlogTests" />
+  </appSettings>
+```
+
+#### Database Connection String
+
+```xml
+  <connectionStrings>
+    <add name="MLog.Properties.Settings.MLogConnectionString" connectionString="Data Source=WN-ITDEV-LT08;Initial Catalog=MLog;User ID=[your db username];Password=[your password]"
+        providerName="System.Data.SqlClient" />
+  </connectionStrings>
+```
+
+The Database Schema for MLog can be found [here](blob/master/MLog.Data/MLog.sql)
