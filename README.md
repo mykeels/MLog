@@ -86,4 +86,4 @@ Thanks! Ikechi Michael I.
 
 ## License
 
-The MI License. Please see [License File](LICENSE) for more information.
+The MIT License. Please see [License File](LICENSE) for more information.
