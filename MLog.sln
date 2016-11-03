@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLog", "MLog\MLog.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLog.Tests", "MLog.Tests\MLog.Tests.csproj", "{CBAE13B0-B9D1-45D4-AFF1-3D4EB9770367}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{A6AC0C2F-BBEC-4EE6-8DBB-A42FDDBE46E8}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MLog.Data", "MLog.Data", "{39FB210F-814D-4EE2-A242-42F02B4B4897}"
+	ProjectSection(SolutionItems) = preProject
+		MLog.Data\MLog.sql = MLog.Data\MLog.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
