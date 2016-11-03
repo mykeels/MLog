@@ -1,6 +1,6 @@
 USE [MLog]
 GO
-/****** Object:  Table [dbo].[tblLog]    Script Date: 11/3/2016 12:16:48 PM ******/
+/****** Object:  Table [dbo].[tblLog]    Script Date: 11/3/2016 4:24:29 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17,6 +17,8 @@ CREATE TABLE [dbo].[tblLog](
 	[JsonData] [varchar](max) NULL,
 	[XmlData] [xml] NULL,
 	[CreationDate] [datetime] NULL,
+	[MethodName] [varchar](max) NULL,
+	[StackTrace] [varchar](max) NULL,
  CONSTRAINT [PK_Log] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
