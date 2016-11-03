@@ -2,7 +2,9 @@
 
 A Simple .NET Library for Data Logging.
 
-### Simple Usage
+## How to Use
+
+#### Simple Usage
 
 ```cs
 //Task: Create a Log for the creation of a New Student
@@ -12,7 +14,7 @@ log.Description = log.Application + " Data Log for " + title;
 Mlog.Manager.Add(log);
 ```
 
-### Log Relationships
+#### Log Relationships
 
 Logs have parent-children relationships using the `Parent` property of each Log-Item. To Create a Child Log:
 
@@ -25,7 +27,7 @@ log.AddChild(coursesLog);
 Mlog.Manager.Add(log);
 ```
 
-### Log Ip Address
+#### Log Ip Address
 
 For documentation purposes, you might want to include the IP Address of the User who performs an Action in its Log.
 
@@ -33,15 +35,7 @@ For documentation purposes, you might want to include the IP Address of the User
 log.IpAddress = MLog.Util.GetIpAddress();
 ```
 
-### Set the [Application] Field via the Web.Config
-
-```xml
-  <appSettings>
-    <add key="mlog-app" value="MlogTests" />
-  </appSettings>
-```
-
-### Log Requests and Responses in WebApi programs
+#### Log Requests and Responses in WebApi programs
 
 ```cs
     [Route("api/students/add")]
@@ -53,3 +47,43 @@ log.IpAddress = MLog.Util.GetIpAddress();
         });
     }
 ```
+
+## Setup Database
+
+The Database Schema for MLog can be found [here](MLog.Data).
+
+## Setup Web.Config
+
+#### Set the [Application] Field
+
+```xml
+  <appSettings>
+    <add key="mlog-app" value="MlogTests" />
+  </appSettings>
+```
+
+#### Database Connection String
+
+```xml
+  <connectionStrings>
+    <add name="MLog.Properties.Settings.MLogConnectionString" connectionString="Data Source=MYKEELS-PC;Initial Catalog=MLog;User ID=[your db username];Password=[your password]"
+        providerName="System.Data.SqlClient" />
+  </connectionStrings>
+```
+
+## Future Improvements
+
+Hmmm, I'm not sure how to improve MLog right now; However, as I use it, I'll figure out more ways it can be improved.
+
+## Enjoying MLog? How you can thank me ...
+
+Follow me on [twitter](https://twitter.com/mykeels). <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/mykeels/MLog" data-icon="octicon-star" data-style="mega" data-count-href="/mykeels/MLog/stargazers" data-count-api="/repos/mykeels/MLog#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mykeels/MLog on GitHub">Star</a> this github repo . Check out [my other projects](https://github.com/mykeels?tab=repositories) and see if you like them.
+
+[Provide useful code critism](https://github.com/mykeels/MLog/issues). I'd love to hear from you, really.
+
+Thanks! Ikechi Michael I.
+
+## License
+
+The MIT License. Please see [License File](LICENSE) for more information.
