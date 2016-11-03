@@ -70,3 +70,20 @@ The Database Schema for MLog can be found [here](MLog.Data).
         providerName="System.Data.SqlClient" />
   </connectionStrings>
 ```
+
+## Future Improvements
+
+Hmmm, I'm not sure how to improve MLog right now; However, as I use it, I'll figure out more ways it can be improved.
+
+## Enjoying MLog? How you can thank me ...
+
+Follow me on [twitter](https://twitter.com/mykeels). <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/mykeels/MLog" data-icon="octicon-star" data-style="mega" data-count-href="/mykeels/MLog/stargazers" data-count-api="/repos/mykeels/MLog#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mykeels/MLog on GitHub">Star</a> this github repo . Check out [my other projects](https://github.com/mykeels?tab=repositories) and see if you like them.
+
+[Provide useful code critism](https://github.com/mykeels/MLog/issues). I'd love to hear from you, really.
+
+Thanks! Ikechi Michael I.
+
+## License
+
+The MI License. Please see [License File](LICENSE) for more information.
