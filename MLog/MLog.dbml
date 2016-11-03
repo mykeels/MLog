@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MLog" Class="MLogDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=WN-ITDEV-LT08;Initial Catalog=MLog;User ID=mykeels" SettingsObjectName="MLog.Properties.Settings" SettingsPropertyName="MLogConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblLog" Member="tblLogs">
+    <Type Name="tblLog">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Parent" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Application" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IpAddress" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="JsonData" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="XmlData" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
