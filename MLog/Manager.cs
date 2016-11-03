@@ -49,5 +49,23 @@ namespace MLog
                 }
             }
         }
+
+        public static T AddRequestAndResponse<T, InpuT>(string title, InpuT inputVal, Func<InpuT, T> func)
+        {
+            Log log = Log.Create<InpuT>(inputVal);
+            log.Title = title;
+            log.Description = log.Application + " Data Log for " + title;
+            log.IpAddress = Util.GetIpAddress();
+            log = Manager.Add(log);
+            T response = func(inputVal);
+
+            Log responseLog = Log.Create(response);
+            responseLog.Title = "Response for Request #" + log.ID + "(" + log.Title + ")";
+            responseLog.Description = log.Application + " Data Log for " + responseLog.Title;
+            responseLog.IpAddress = log.IpAddress;
+            log.AddChild(responseLog);
+
+            return response;
+        }
     }
 }
