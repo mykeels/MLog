@@ -17,7 +17,7 @@ namespace MLog.Tests
             {
                 string loggedData = StringX.RandomLetters(50);
                 Log log = GetNewLog<string>(loggedData);
-                log = Manager.Add(log);
+                Manager.Add(log);
                 logs.Add(log);
                 Console.WriteLine("Logging Data: " + log.Title);
                 for (int j = 1; j <= 5; j++)

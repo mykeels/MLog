@@ -24,8 +24,9 @@ namespace MLog
             }
             using (MLogDataContext db = new MLogDataContext())
             {
-                return Log.Map((from pp in db.tblLogs where pp.Title == log.Title orderby pp.ID descending select pp).ToList().FirstOrDefault());
+                log.ID = (from pp in db.tblLogs where pp.Title == log.Title orderby pp.ID descending select pp.ID).ToList().FirstOrDefault();
             }
+            return log;
         }
 
         public static List<Log> GetLogs(Log log)
