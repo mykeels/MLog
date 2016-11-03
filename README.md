@@ -48,6 +48,10 @@ log.IpAddress = MLog.Util.GetIpAddress();
     }
 ```
 
+## Setup Database
+
+The Database Schema for MLog can be found [here](tree/master/MLog.Data).
+
 ## Setup Web.Config
 
 #### Set the [Application] Field
@@ -66,5 +70,3 @@ log.IpAddress = MLog.Util.GetIpAddress();
         providerName="System.Data.SqlClient" />
   </connectionStrings>
 ```
-
-The Database Schema for MLog can be found [here](blob/master/MLog.Data/MLog.sql)
