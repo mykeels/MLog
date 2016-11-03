@@ -45,9 +45,9 @@ log.IpAddress = MLog.Util.GetIpAddress();
 
 ```cs
     [Route("api/students/add")]
-    public Response<Models.User> Add([FromBody()] Models.User val)
+    public Response<Student> Add([FromBody()] Models.User val)
     {
-        return MLog.Manager.AddRequestAndResponse<Response<Student>, User>("api-student-add", val, (User values) =>
+        return MLog.Manager.AddRequestAndResponse<Response<Student>, User>("api-student-add", val, (Student values) =>
         {
             return new Response<Student>("New Student Created", Student.Add(values), true);
         });
