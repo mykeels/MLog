@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MLog">
   <DataContextMoniker Name="/MLogDataContext" />
   <nestedChildShapes>
-    <classShape Id="9e672b4d-8ab0-4f15-899f-a505cc47a357" absoluteBounds="1.5, 0.875, 2, 2.5401025390625">
+    <classShape Id="408bf6fa-581d-42d2-8a37-5e4b3ae070e9" absoluteBounds="0.5, 0.5, 2, 2.9247054036458331">
       <DataClassMoniker Name="/MLogDataContext/tblLog" />
       <nestedChildShapes>
-        <elementListCompartment Id="d685279e-a72a-4045-8d40-f3ccc216194b" absoluteBounds="1.5149999999999997, 1.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1c38930f-f3dd-491a-ad7a-5305a57cbcee" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

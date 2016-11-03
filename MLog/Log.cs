@@ -21,6 +21,8 @@ namespace MLog
         public string JsonData { get; set; }
         public XElement XmlData { get; set; }
         public string IpAddress { get; set; }
+        private string MethodName { get; set; }
+        private string StackTrace { get; set; }
 
         public tblLog Map()
         {
@@ -34,6 +36,8 @@ namespace MLog
             ret.Parent = Convert.ToInt64(this.Parent);
             ret.Title = this.Title;
             ret.XmlData = this.XmlData;
+            ret.MethodName = this.MethodName;
+            ret.StackTrace = this.StackTrace;
             return ret;
         }
 
@@ -50,6 +54,8 @@ namespace MLog
             ret.Parent = Convert.ToInt64(log.Parent);
             ret.Title = log.Title;
             ret.XmlData = log.XmlData;
+            ret.MethodName = log.MethodName;
+            ret.StackTrace = log.StackTrace;
             return ret;
         }
 
@@ -64,12 +70,16 @@ namespace MLog
             Log ret = new Log();
             ret.JsonData = JsonConvert.SerializeObject(data);
             ret.XmlData = data.ToXElement();
+            ret.MethodName = Util.GetMethodFullName(2);
+            ret.StackTrace = Environment.StackTrace;
             return ret;
         }
 
         public static Log Create()
         {
             Log ret = new Log();
+            ret.MethodName = Util.GetMethodFullName(2);
+            ret.StackTrace = Environment.StackTrace;
             return ret;
         }
 
@@ -99,6 +109,16 @@ namespace MLog
         public Log AddChild(Log log)
         {
             return Manager.Add(log, this);
+        }
+
+        public string GetMethodName()
+        {
+            return this.MethodName;
+        }
+
+        public string GetStackTrace()
+        {
+            return this.StackTrace;
         }
     }
 }

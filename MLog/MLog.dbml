@@ -11,6 +11,8 @@
       <Column Name="JsonData" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="XmlData" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MethodName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="StackTrace" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

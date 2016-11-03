@@ -98,6 +98,10 @@ namespace MLog
 		
 		private System.Nullable<System.DateTime> _CreationDate;
 		
+		private string _MethodName;
+		
+		private string _StackTrace;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -120,6 +124,10 @@ namespace MLog
     partial void OnXmlDataChanged();
     partial void OnCreationDateChanging(System.Nullable<System.DateTime> value);
     partial void OnCreationDateChanged();
+    partial void OnMethodNameChanging(string value);
+    partial void OnMethodNameChanged();
+    partial void OnStackTraceChanging(string value);
+    partial void OnStackTraceChanged();
     #endregion
 		
 		public tblLog()
@@ -303,6 +311,46 @@ namespace MLog
 					this._CreationDate = value;
 					this.SendPropertyChanged("CreationDate");
 					this.OnCreationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MethodName", DbType="VarChar(MAX)")]
+		public string MethodName
+		{
+			get
+			{
+				return this._MethodName;
+			}
+			set
+			{
+				if ((this._MethodName != value))
+				{
+					this.OnMethodNameChanging(value);
+					this.SendPropertyChanging();
+					this._MethodName = value;
+					this.SendPropertyChanged("MethodName");
+					this.OnMethodNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StackTrace", DbType="VarChar(MAX)")]
+		public string StackTrace
+		{
+			get
+			{
+				return this._StackTrace;
+			}
+			set
+			{
+				if ((this._StackTrace != value))
+				{
+					this.OnStackTraceChanging(value);
+					this.SendPropertyChanging();
+					this._StackTrace = value;
+					this.SendPropertyChanged("StackTrace");
+					this.OnStackTraceChanged();
 				}
 			}
 		}
