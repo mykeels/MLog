@@ -50,7 +50,7 @@ log.IpAddress = MLog.Util.GetIpAddress();
 
 ## Setup Database
 
-The Database Schema for MLog can be found [here](tree/master/MLog.Data).
+The Database Schema for MLog can be found [here](MLog.Data).
 
 ## Setup Web.Config
 
