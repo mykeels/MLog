@@ -1,0 +1,14 @@
+﻿{
+  "appSettings": {
+    "mlog-app": "MlogTests",
+    "MongoDBUri": "mongodb://localhost:27017",
+    "MongoDBName": "MLogTests"
+  },
+  "connectionStrings": [
+    {
+      "name": "MLog.Properties.Settings.MLogConnectionString",
+      "connectionString": "Data Source=WN-ITDEV-LT08;Initial Catalog=MLog;User ID=mykeels;Password=password",
+      "providerName": "System.Data.SqlClient"
+    }
+  ]
+}
