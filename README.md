@@ -1,4 +1,5 @@
-# MLog 
+# <span style="color:#00AAFF">M</span><span style="color:#FFAA00">L</span><span style="color:#DDAA22">o</span><span style="color:gold">g</span> 
+
 
 Now with .NET Core Support, MLog is a simple .NET Library for Data Logging in your .NET Apps.
 
