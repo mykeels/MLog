@@ -48,10 +48,17 @@ log.IpAddress = MLog.Util.GetIpAddress();
     }
 ```
 
+## Dependencies
+
+- Newtonsoft JSON [(view)](http://www.newtonsoft.com/json)
+- MongoDB.Core [(view)](https://www.nuget.org/packages/MongoDB.Driver.Core/)
+- MongoDB.Driver [(view)](https://www.nuget.org/packages/MongoDB.Driver.Core/)
+- Microsoft .NET Framework 4.5.2 [(download)](https://www.microsoft.com/en-us/download/details.aspx?id=42642)
+
 ## Supported Databases
 
-- SQL Server [(View Schema)](MLog.Data)
-- MongoDB
+- SQL Server [(schema)](MLog.Data)
+- MongoDB [(view)](https://mongodb.com)
 
 ## Setup Web.Config
 
