@@ -1,6 +1,5 @@
 # <span style="color:#00AAFF">M</span><span style="color:#FFAA00">L</span><span style="color:#DDAA22">o</span><span style="color:gold">g</span> 
 
-
 Now with .NET Core Support, MLog is a simple .NET Library for Data Logging in your .NET Apps.
 
 ## How to Use
@@ -94,12 +93,16 @@ log.IpAddress = MLog.Util.GetIpAddress();
 
 ## Future Improvements
 
-Hmmm, I'm not sure how to improve MLog right now; However, as I use it, I'll figure out more ways it can be improved.
+The dream is to make MLog multi-platform using the .NET Standard, and ensure it is possible to use MLog with the following Databases:
+
+- SQL Server
+- MongoDB
+
+Also, we need to provide developer-users with a way to configure MLog using Lamda Expressions, so they can make MLog behave in any number of ways to suit their applications.
 
 ## Enjoying MLog? How you can thank me ...
 
-Follow me on [twitter](https://twitter.com/mykeels). <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/mykeels/MLog" data-icon="octicon-star" data-style="mega" data-count-href="/mykeels/MLog/stargazers" data-count-api="/repos/mykeels/MLog#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mykeels/MLog on GitHub">Star</a> this github repo . Check out [my other projects](https://github.com/mykeels?tab=repositories) and see if you like them.
+Follow me on [twitter](https://twitter.com/mykeels). Star this github repo . Check out [my other projects](https://github.com/mykeels?tab=repositories) and see if you like them.
 
 [Provide useful code critism](https://github.com/mykeels/MLog/issues). I'd love to hear from you, really.
 
