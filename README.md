@@ -48,9 +48,10 @@ log.IpAddress = MLog.Util.GetIpAddress();
     }
 ```
 
-## Setup Database
+## Supported Databases
 
-The Database Schema for MLog can be found [here](MLog.Data).
+- SQL Server [(View Schema)](MLog.Data)
+- MongoDB
 
 ## Setup Web.Config
 
@@ -69,6 +70,25 @@ The Database Schema for MLog can be found [here](MLog.Data).
     <add name="MLog.Properties.Settings.MLogConnectionString" connectionString="Data Source=MYKEELS-PC;Initial Catalog=MLog;User ID=[your db username];Password=[your password]"
         providerName="System.Data.SqlClient" />
   </connectionStrings>
+```
+
+## Setup config.json
+
+```json
+{
+  "appSettings": {
+    "mlog-app": "MlogTests",
+    "MongoDBUri": "mongodb://localhost:27017",
+    "MongoDBName": "MLogTests"
+  },
+  "connectionStrings": [
+    {
+      "name": "MLog.Properties.Settings.MLogConnectionString",
+      "connectionString": "Data Source=MYKEELS-PC;Initial Catalog=MLog;User ID=mykeels",
+      "providerName": "System.Data.SqlClient"
+    }
+  ]
+}
 ```
 
 ## Future Improvements
