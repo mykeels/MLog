@@ -7,7 +7,7 @@ Now with .NET Core Support, MLog is a simple .NET Library for Data Logging in yo
 
 #### Simple Usage
 
-```cs
+```csharp
 //Task: Create a Log for the creation of a New Student
 Mlog.Log log = Mlog.Log.Create<Student>(newStudent);
 log.Title = "New Student Created: [" + newStudent.FullName + "]";
@@ -19,7 +19,7 @@ Mlog.Manager.Add(log);
 
 Logs have parent-children relationships using the `Parent` property of each Log-Item. To Create a Child Log:
 
-```cs
+```csharp
 //Task: Create a Log for the creation of a New Student's Course
 var coursesLog = Mlog.Log.Create<List<Course>>(newStudent.GetCourses());
 log.Title = "New Courses added for [" + newStudent.FullName + "]";
@@ -32,13 +32,13 @@ Mlog.Manager.Add(log);
 
 For documentation purposes, you might want to include the IP Address of the User who performs an Action in its Log.
 
-```cs
+```csharp
 log.IpAddress = MLog.Util.GetIpAddress();
 ```
 
 #### Log Requests and Responses in WebApi programs
 
-```cs
+```csharp
     [Route("api/students/add")]
     public Response<Student> Add([FromBody()] Models.User val)
     {
