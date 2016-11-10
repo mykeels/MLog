@@ -1,6 +1,6 @@
-# MLog
+# MLog 
 
-A Simple .NET Library for Data Logging.
+Now with .NET Core Support, MLog is a simple .NET Library for Data Logging in your .NET Apps.
 
 ## How to Use
 
